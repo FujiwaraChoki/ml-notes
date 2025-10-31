@@ -2,9 +2,9 @@
 
 We will learn how to build [Micrograd](https://github.com/karpathy/micrograd).
 
-## Backpropogration
+## Backpropagation
 
-Backpropogration is an algorithm that allows you to efficiently
+Backpropagation is an algorithm that allows you to efficiently
 evaluate the gradient of some kind of a loss function, with respect
 to the weights of a model.
 
