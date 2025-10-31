@@ -23,6 +23,19 @@ Relu (short for `Rectified Linear Unit`) is a **simple, non-linear activation fu
 used in Neural Nets.
 
 
-Mathemtically:
+### Mathemtically:
 
 $$f(x) = max(0, x)$$
+
+So:
+
+- If $$x \ge 0$$, it outputs $$x$$
+- If $$x \le 0$$, it outputs $$0$$.
+
+### Examples:
+
+| Input | Output | Reason                   |
+| ----- | ------ | ------------------------ |
+| 2     | 2      | 2 is larger than 0.      |
+| \-5   | 0      | \-5 is smaller than 0.   |
+| 0     | 0      | 0 is less or equal to 0. |
