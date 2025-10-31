@@ -37,3 +37,7 @@ So:
 | 2     | 2      | 2 is larger than 0.      |
 | \-5   | 0      | \-5 is smaller than 0.   |
 | 0     | 0      | 0 is less or equal to 0. |
+
+# ChatGPT Shared Chats
+
+- [Relu](https://chatgpt.com/share/69051e53-53f4-8008-9ad7-278cc2c19d46)
