@@ -19,9 +19,7 @@ Micrograd allows the building of mathemtical expressions.
 
 ## Relu
 
-Relu (short for `Rectified Linear Unit`) is a **simple, non-linear activation function
-used in Neural Nets.
-
+Relu (short for `Rectified Linear Unit`) is a **simple, non-linear activation function** used in Neural Nets.
 
 ### Mathemtically:
 
