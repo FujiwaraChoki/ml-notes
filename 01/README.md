@@ -1,0 +1,28 @@
+# Lesson 1
+
+We will learn how to build [Micrograd](https://github.com/karpathy/micrograd).
+
+## Backpropogration
+
+Backpropogration is an algorithm that allows you to efficiently
+evaluate the gradient of some kind of a loss function, with respect
+to the weights of a model.
+
+We can then iteratively tune the weights of that Neural Network to
+minimize the loss function, and therefore improve the accuracy
+of the network.
+
+It is at the core of every modern neural network library like PyTorch,
+Tensorflow, etc.
+
+Micrograd allows the building of mathemtical expressions.
+
+## Relu
+
+Relu (short for `Rectified Linear Unit`) is a **simple, non-linear activation function
+used in Neural Nets.
+
+
+Mathemtically:
+
+$$f(x) = max(0, x)$$
