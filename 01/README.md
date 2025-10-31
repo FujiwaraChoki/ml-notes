@@ -38,6 +38,46 @@ So:
 | \-5   | 0      | \-5 is smaller than 0.   |
 | 0     | 0      | 0 is less or equal to 0. |
 
+If we build out an expression graph using these statements using Micrograd:
+
+```python
+from micrograd.engine import Value
+
+a = Value(-4.0)
+b = Value(2.0)
+c = a + b
+d = a * b + b**3
+c += c + 1
+c += 1 + c + (-a)
+d += d * 2 + (b + a).relu()
+d += 3 * d + (b - a).relu()
+e = c - d
+f = e**2
+g = f / 2.0
+g += 10.0 / f
+print(f'{g.data:.4f}') # prints 24.7041, the outcome of this forward pass
+g.backward()
+print(f'{a.grad:.4f}') # prints 138.8338, i.e. the numerical value of dg/da
+print(f'{b.grad:.4f}') # prints 645.5773, i.e. the numerical value of dg/db
+```
+
+`a` and `b` would be our initial nodes.
+
+c would have to child nodes (children): a and b.
+
+Everytime we perform an operation like addition or multiplication, the Output
+of that operation "remembers" how it was computed. for example, that c came from $$a+b$$ for instance.
+
+So as we execute these lines, it's building a directed graph where edges point from inputs -> outputs.
+
+The directed graph  would look something like this:
+
+![forward_pass_graph.png](forward_pass_graph.png)
+
+The cool thing now is, at `g` (the end), the result of the forward pass would be 24.7041.
+
+
+
 # ChatGPT Shared Chats
 
 - [Relu](https://chatgpt.com/share/69051e53-53f4-8008-9ad7-278cc2c19d46)
